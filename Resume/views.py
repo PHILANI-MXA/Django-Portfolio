@@ -4,4 +4,13 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, world")
+    return render(request, "templates/index.html")
+
+def philani(request):
+    return HttpResponse("Hello Philani")
+
+def lungas(request):
+    return HttpResponse("Hello Lungas")
+
+def greet(request, name):
+    return HttpResponse(f"Resume/index.html, {name.capitalize()}!")
